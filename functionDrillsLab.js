@@ -4,7 +4,10 @@
   Call the function.
 */
 
-//CODE HERE
+function helloWorld(){
+  console.log(helloWorld)
+}
+
 
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -14,7 +17,11 @@
   Call the function, passing in an argument.
 */
 
-//CODE HERE
+function printName(name){
+  console.log(name)
+}
+printName('Katie')
+
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -27,9 +34,10 @@
   Make sure to call your function and pass in an argument.
 */
 
-//CODE HERE
-
-
+function greeting(name){
+  console.log(`Hello,${name}`)
+}
+greeting('Grant')
 ////////////////// PROBLEM 4 ////////////////////
 /*
   Create a function called add that takes in two parameters (both of these will be numbers)
@@ -37,7 +45,12 @@
   Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
 */
 
-//CODE HERE
+function add(num1, num2){
+  return num1 + num2;
+}
+
+let sum = add(2,3)
+console.log(sum)
 
 
 ////////////////// PROBLEM 5 ////////////////////
@@ -49,8 +62,18 @@
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
 
-//CODE HERE
+function nameCheck(name){
+  if (name === 'Steven'){
+    return 'What is up,Steven?'
+  }else if (name === 'Bryan'){
+    return 'Hello, Bryan'
+  } else{
+    return `Cool name, ${name}`
+  } 
+}
+let nameGreeting = nameCheck('Steven')
 
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -62,7 +85,20 @@
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
 
-//CODE HERE
+function faveColorFinder(color){
+  if (color === 'red'){
+    return 'red is a great color'
+  } else if (color=== 'green'){
+    return 'green is a solid favorite color'
+  } else if (color === 'black'){
+    return 'so trendy' 
+  }else {
+    return 'you need to evaluate your favorite color choice'
+  }
+}
+
+let colorRating = faveColorFinder('pink')
+console.log(colorRating)
 
 
 ////////////////// PROBLEM 7 ////////////////////
@@ -73,7 +109,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Call the function, passing in the `namesArr` array (above).
 */
 
-//CODE HERE
+function printAllNames(names){
+  for (let i=0; i<names.length; i++){
+    console.log(names[i])
+  }
+}
+printAllNames(namesArr)
 
 
 ////////////////// PROBLEM 8 ////////////////////
@@ -84,8 +125,17 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
 
-//CODE HERE
+function thatsOdd(num){
+  if(num %2 === 0){
+    return "That's not odd!"
+  }else {
+    return 'That is an odd indeed!'
+  }
+}
 
+let oddChecker = thatsOdd(11)
+
+console.log (oddChecker)
 
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -98,7 +148,19 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
   Return the answers array inside of the function to a variable called `arrayEvaluator`.
 */
 
-//CODE HERE
+function bigOrSmall(arr){
+  let answers = []
+  for (let i=0; i <arr.length; i++){
+  if(arr[i] > 100){
+    answers.push('big')
+  }else if(arr [i] <=100){
+    answers.push('small')
+  }
+}
+return answers
+}
+let arrayEvaluator= bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
 
 
 ////////////////// PROBLEM 10 ////////////////////
@@ -109,7 +171,15 @@ let loser = 'Glimmer'
   The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
 */
 
-//CODE HERE
+function theEliminator(contestants,loser){
+  for (let i=0; i < contestants.length; i++){
+    if (contestants [i]=== loser){
+      contestants.splice([i],1)
+    }
+  }
+  return contestants
+}
+theEliminator(contestants, loser)
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -118,7 +188,11 @@ let sampleString = "Hi, my name is Kylo."
   Write a function that takes im one argument, a string. The function should then console.log that string, in entirely uppercase characters.
 */
 
-//CODE HERE
+function sample(string){
+  console.log(string.toUpperCase())
+  }
+  
+  sample(sampleString)
 
 
 ////////////////// PROBLEM 12 ////////////////////
